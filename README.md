@@ -7,7 +7,7 @@ Simply provide a valid stock ticker when prompted and you will be provided a lis
 
 This was written and test using Python 2.7; I do not believe that it will work in Python 3.x.
 
-**Get the source: **
+**Get the source:**
 
 1. Clone the git repository
 2. Create a Python virtualenv: `virtualenv venv-saqaparser`
