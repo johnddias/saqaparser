@@ -53,9 +53,13 @@ soup = BeautifulSoup(response.text, 'html.parser')
 
 transcript = soup.find(id="a-body")
 fo = open("qanda.txt", "w")
+qastart = False
 for i in transcript.children:
-    t = i.string
-    if t:
-        fo.write(t.encode('utf-8'))
-        fo.write("\n")
+    if i.string == "Question-and-Answer Session":
+        qastart = True
+    if qastart:
+        t = i.string
+        if t:
+            fo.write(t.encode('utf-8'))
+            fo.write("\n")
 fo.close()
